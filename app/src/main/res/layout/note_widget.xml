@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layoutBackground"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_widget">
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/Widget_TextSize"
+        android:fontFamily="@string/fontFamilyLight"
+        android:hint="@string/noteHint"
+        android:textColorHint="@color/secondary_text"/>
+
+</LinearLayout>

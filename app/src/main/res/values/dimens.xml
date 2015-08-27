@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+
+    <dimen name="EditText_TextSize">22sp</dimen>
+
+    <dimen name="Widget_TextSize">18sp</dimen>
+
+    <dimen name="CustomDialog_TextMarginTop">5dp</dimen>
+    <dimen name="CustomDialog_TextSize">20sp</dimen>
+    <dimen name="CustomDialog_ImageSize">40dp</dimen>
+    <dimen name="CustomDialog_TextButtonGap">30dp</dimen>
+    <dimen name="CustomDialog_ButtonWidth">135dp</dimen>
+    <dimen name="CustomDialog_ButtonHeight">35dp</dimen>
+</resources>

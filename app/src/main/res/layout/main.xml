@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/notePad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:padding="@dimen/default_margin"
+        android:gravity="top"
+        android:background="@android:color/transparent"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/EditText_TextSize"
+        android:fontFamily="@string/fontFamilyLight"
+        android:hint="@string/noteHint"
+        android:textColorHint="@color/secondary_text"
+        android:inputType="textCapSentences|textMultiLine"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>
