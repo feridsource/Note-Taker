@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/item_listen"
+        android:title="@string/listen"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_share"
+        android:title="@string/share"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/item_save"
         android:title="@string/save"
         android:icon="@drawable/ic_save"
-        android:orderInCategory="3"
+        android:orderInCategory="2"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/item_delete"
         android:title="@string/eraseAll"
         android:icon="@drawable/ic_delete"
-        android:orderInCategory="2"
-        app:showAsAction="always" />
-    
-    <item
-        android:id="@+id/item_share"
-        android:title="@string/share"
-        android:icon="@drawable/ic_share"
         android:orderInCategory="1"
         app:showAsAction="always" />
 

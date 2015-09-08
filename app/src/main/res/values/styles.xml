@@ -9,6 +9,11 @@
 
         <!-- components -->
         <item name="android:dialogTheme">@style/Theme.AppCompat.Light.Dialog</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionButtonOverflow</item>
+    </style>
+
+    <style name="ActionButtonOverflow" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_settings</item>
     </style>
 
 </resources>

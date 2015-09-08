@@ -11,11 +11,13 @@
     <string name="fontFamilyCondensed">sans-serif-condensed</string>
 
     <string name="noteHint">Write your note</string>
-    <string name="eraseAll">Erase All</string>
     <string name="sure">Are you sure?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="eraseAll">Erase All</string>
     <string name="save">Save and Close</string>
     <string name="share">Share Notes</string>
+    <string name="listen">Listen To Me</string>
+    <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
 </resources>

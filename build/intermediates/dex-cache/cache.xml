@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\pre-dexed\debug\classes-99b2c4d6bafedfa00fda0fcd265de3d273e1d207.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\classes-fb8f127bcf7024f5142395adc5c236b421493a5a.jar" />
     </item>
     <item
-        jar="C:\Users\vito\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-8bbbc5fe047facd2a35f79b35e13e275986644cd.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-752a374d85b91fdb22c90fac5e1a67c5b657f0a5.jar" />
     </item>
     <item
-        jar="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-e3c1f98dd3d79a09ef03af389c815e3057489737.jar" />
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\classes-38d895138458c1ed45381751d8fa0a6849b72bd3.jar" />
     </item>
     <item
-        jar="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jar="C:\Users\vito\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\vito\AndroidStudioProjects\NoteTake\app\build\intermediates\pre-dexed\debug\classes-371c6dec25e3aa409ac669b4c6a990da2d8c6951.jar" />
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-47f15530be0c1f41c4f2ac1dcbe2fe6579cebf37.jar" />
     </item>
 
 </items>
