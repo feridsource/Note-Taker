@@ -21,7 +21,7 @@
                 android:resource="@xml/note_widget_provider" />
         </receiver>
 
-        <activity android:name="MainActivity"
+        <activity android:name=".MainActivity"
             android:launchMode="singleTop"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysVisible">

@@ -1,4 +1,4 @@
-# Note Taker
+# Note Widget
 
 This is an open source simple, easy to use and fast widget.
 

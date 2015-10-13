@@ -8,8 +8,8 @@ android {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 14
-        versionName "3.1.0"
+        versionCode 15
+        versionName "3.1.1"
     }
     buildTypes {
         release {

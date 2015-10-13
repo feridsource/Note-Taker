@@ -16,7 +16,6 @@
 
 package com.ferid.app.notetake;
 
-import android.app.AlertDialog;
 import android.appwidget.AppWidgetManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
@@ -26,6 +25,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -124,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             builderOperation.setNegativeButton(getString(R.string.no), null);
-            builderOperation.create();
-            builderOperation.show();
+            AlertDialog alertDialog = builderOperation.create();
+            alertDialog.show();
         }
     }
 

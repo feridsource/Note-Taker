@@ -15,3 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# v7 support
+-keep class android.support.v7.widget.** { *; }
+-keep interface android.support.v7.widget.** { *; }
