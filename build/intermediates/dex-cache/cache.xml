@@ -23,18 +23,18 @@
         <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_38c0cb55c6fe94567040b62e5fe57bed8872fbde.jar" />
     </item>
     <item
-        jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_8f4340049dff2235e7522e43e2fca3056c9b7528.jar" />
-    </item>
-    <item
         jar="C:\Users\vito\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
         <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_734d58162ac5c08ff4c9355a226441c7d49f30a6.jar" />
+    </item>
+    <item
+        jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_8f4340049dff2235e7522e43e2fca3056c9b7528.jar" />
     </item>
     <item
         jar="C:\Users\vito\AndroidStudioProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"

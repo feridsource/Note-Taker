@@ -218,6 +218,8 @@ public class MainActivity extends AppCompatActivity {
                                 new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
+                                        deleteExistingFile(fileName);
+
                                         saveAs(fileName);
                                     }
                                 }).show();
@@ -239,6 +241,17 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } else {
             return false;
+        }
+    }
+
+    /**
+     * Delete existing file
+     * @param fileName file name
+     */
+    private void deleteExistingFile(String fileName) {
+        File file = new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION);
+        if (file.exists()) {
+            file.delete();
         }
     }
 
@@ -337,7 +350,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (text != null) notePad.setText(text.toString());
+        if (text != null) {
+            notePad.setText(text.toString());
+            notePad.setSelection(notePad.getText().length());
+        }
     }
 
     /**
