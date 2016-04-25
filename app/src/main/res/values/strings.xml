@@ -18,6 +18,21 @@
     <string name="save">Save and Close</string>
     <string name="share">Share Notes</string>
     <string name="listen">Listen To Me</string>
+    <string name="saveAs">Save As</string>
+    <string name="upload">Upload</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
+
+    <string name="grantPermission">Grant permission</string>
+    <string name="ok">OK</string>
+    <string name="writeError">Problem occured during writing</string>
+    <string name="writeSuccess">Saved successfully</string>
+
+    <string name="saveAsHint">File Name</string>
+    <string name="fileAlreadyExists">File already exists</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="selectFile">Select txt File to Upload</string>
+    <string name="uploadError">Upload error</string>
+    <string name="mountExternalStorage">Please mount external storage</string>
+    <string name="extensionWarning">Please use txt file</string>
 
 </resources>

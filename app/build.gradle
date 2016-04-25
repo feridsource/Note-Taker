@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
-        targetSdkVersion 22
-        versionCode 15
-        versionName "3.1.1"
+        targetSdkVersion 23
+        versionCode 16
+        versionName "4.0.0"
     }
     buildTypes {
         release {
@@ -21,6 +21,10 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     //support lib
-    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+
+    //design
+    compile 'com.android.support:design:23.3.0'
 }

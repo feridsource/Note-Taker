@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Ferid Cafer
+ * Copyright (C) 2016 Ferid Cafer
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,27 +16,44 @@
 
 package com.ferid.app.notetake;
 
+import android.Manifest;
 import android.appwidget.AppWidgetManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.ferid.app.notetake.enums.PermissionFor;
+import com.ferid.app.notetake.interfaces.PromptListener;
+import com.ferid.app.notetake.material_dialog.PromptDialog;
 import com.ferid.app.notetake.prefs.PrefsUtil;
+import com.ferid.app.notetake.utility.DirectoryUtility;
 import com.ferid.app.notetake.widget.NoteWidget;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -46,7 +63,15 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
     private EditText notePad;
 
-    private final int SPEECH_REQUEST_CODE = 0;
+    private static final int SPEECH_REQUEST_CODE = 100;
+    private static final int REQUEST_EXTERNAL_STORAGE = 101;
+    private static final int REQUEST_IMPORT_TXT = 102;
+
+    private static final String EXTENSION = ".txt";
+
+    //permission type for action
+    private PermissionFor permissionFor = PermissionFor.NONE;
+
 
     /**
      * Called when the activity is first created.
@@ -171,6 +196,220 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Get file name via asking user
+     */
+    private void getFileName() {
+        final PromptDialog promptDialog = new PromptDialog(context);
+        promptDialog.setPositiveButton(getString(R.string.ok));
+        promptDialog.setOnPositiveClickListener(new PromptListener() {
+            @Override
+            public void OnPrompt(String promptText) {
+
+                promptDialog.dismiss();
+
+                if (!TextUtils.isEmpty(promptText)) {
+                    final String fileName = promptText.trim();
+
+                    if (!isFileExist(fileName)) {
+                        saveAs(fileName);
+                    } else {
+                        Snackbar.make(notePad, getString(R.string.fileAlreadyExists),
+                                Snackbar.LENGTH_LONG).setAction(getString(R.string.overwrite),
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        saveAs(fileName);
+                                    }
+                                }).show();
+                    }
+                }
+            }
+        });
+        promptDialog.show();
+    }
+
+    /**
+     * Does the given file name already exist?
+     * @param fileName Given file name
+     * @return yes or no
+     */
+    private boolean isFileExist(String fileName) {
+        File file = new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION);
+        if (file.exists()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Save into a file
+     */
+    private void saveAs(String fileName) {
+        boolean isFileOperationSuccessful = true;
+
+        if (DirectoryUtility.isExternalStorageMounted()) {
+
+            DirectoryUtility.createDirectory();
+
+            FileOutputStream outputStream = null;
+
+            try {
+                outputStream = new FileOutputStream (
+                        new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION), true);
+                outputStream.write(notePad.getText().toString().getBytes());
+            } catch (IOException e) {
+                isFileOperationSuccessful = false;
+            } finally {
+                if (outputStream != null) {
+                    try {
+                        outputStream.flush();
+                        outputStream.close();
+                    } catch (IOException e) {
+                        isFileOperationSuccessful = false;
+                    }
+                }
+            }
+
+            if (isFileOperationSuccessful) {
+                Snackbar.make(notePad, getString(R.string.writeSuccess),
+                        Snackbar.LENGTH_LONG).show();
+            } else {
+                Snackbar.make(notePad, getString(R.string.writeError),
+                        Snackbar.LENGTH_LONG).show();
+            }
+        } else {
+            Snackbar.make(notePad, getString(R.string.mountExternalStorage),
+                    Snackbar.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Browse files to upload txt file
+     */
+    private void browseFiles() {
+        //if directory is not mounted do not start the operation
+        if (DirectoryUtility.isExternalStorageMounted()) {
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("*/*");
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            try {
+                startActivityForResult(Intent.createChooser(intent,
+                        getString(R.string.selectFile)), REQUEST_IMPORT_TXT);
+            } catch (ActivityNotFoundException e) {
+                Snackbar.make(notePad, getString(R.string.uploadError),
+                        Snackbar.LENGTH_LONG).show();
+            }
+
+        } else {
+            Snackbar.make(notePad, getString(R.string.mountExternalStorage),
+                    Snackbar.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Upload txt / read from file
+     * @param path
+     */
+    private void readFromFile(String path) {
+        StringBuilder text = new StringBuilder();
+        BufferedReader br = null;
+        try {
+            File file = new File(path);
+            br = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = br.readLine()) != null) {
+                text.append(line);
+                text.append("\n");
+            }
+
+        } catch (IOException e) {
+            Snackbar.make(notePad, getString(R.string.uploadError),
+                    Snackbar.LENGTH_LONG).show();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    Snackbar.make(notePad, getString(R.string.uploadError),
+                            Snackbar.LENGTH_LONG).show();
+                }
+            }
+        }
+
+        if (text != null) notePad.setText(text.toString());
+    }
+
+    /**
+     * Ask for read-write external storage permission
+     */
+    public void askForPermissionExternalStorage() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) { //permission yet to be granted
+
+            getPermissionExternalStorage();
+        } else { //permission already granted
+            if (permissionFor == PermissionFor.READ_FILE) {
+                browseFiles();
+            } else if (permissionFor == PermissionFor.WRITE_FILE) {
+                getFileName();
+            }
+
+            //back to its initial state
+            permissionFor = PermissionFor.NONE;
+        }
+    }
+
+    /**
+     * Request and get the permission for external storage
+     */
+    public void getPermissionExternalStorage() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+            Snackbar.make(notePad, R.string.grantPermission,
+                    Snackbar.LENGTH_LONG)
+                    .setAction(R.string.ok, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                    REQUEST_EXTERNAL_STORAGE);
+                        }
+                    }).show();
+        } else {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_EXTERNAL_STORAGE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_EXTERNAL_STORAGE: {
+                //if request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    if (permissionFor == PermissionFor.READ_FILE) {
+                        browseFiles();
+                    } else if (permissionFor == PermissionFor.WRITE_FILE) {
+                        getFileName();
+                    }
+
+                    //back to its initial state
+                    permissionFor = PermissionFor.NONE;
+                }
+
+                return;
+            }
+        }
+    }
+
+    /**
      * Capitalize the first letter of a given text
      * @param text
      * @return
@@ -218,11 +457,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_delete:
                 eraseAll();
                 return true;
+            case R.id.item_listen:
+                listenToUser();
+                return true;
             case R.id.item_share:
                 shareNotes();
                 return true;
-            case R.id.item_listen:
-                listenToUser();
+            case R.id.item_save_as:
+                permissionFor = PermissionFor.WRITE_FILE;
+                askForPermissionExternalStorage();
+                return true;
+            case R.id.item_upload:
+                permissionFor = PermissionFor.READ_FILE;
+                askForPermissionExternalStorage();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -242,8 +489,38 @@ public class MainActivity extends AppCompatActivity {
             spokenText = capitalizeFirstLetter(spokenText);
             //now append the spoken text
             appendNote(spokenText);
+
+        } else  if (requestCode == REQUEST_IMPORT_TXT) {
+            if (resultCode == RESULT_OK) {
+                String filePath = data.getData().getPath();
+
+                //only sqlite extension is allowed
+                if (!filePath.endsWith("txt")) {
+                    Snackbar.make(notePad, getString(R.string.extensionWarning),
+                            Snackbar.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (filePath.contains(":")) {
+                    String[] partFilePath = filePath.split(":");
+                    if (partFilePath.length == 2) {
+                        String fullPath = Environment.getExternalStorageDirectory()
+                                + "/" + partFilePath[1];
+
+                        readFromFile(fullPath);
+                    } else {
+                        Snackbar.make(notePad, getString(R.string.uploadError),
+                                Snackbar.LENGTH_LONG).show();
+                    }
+                } else {
+                    if (filePath != null) {
+                        readFromFile(filePath);
+                    }
+                }
+            }
         }
 
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }
