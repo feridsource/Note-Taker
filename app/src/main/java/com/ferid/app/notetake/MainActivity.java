@@ -73,9 +73,6 @@ public class MainActivity extends AppCompatActivity {
     private PermissionFor permissionFor = PermissionFor.NONE;
 
 
-    /**
-     * Called when the activity is first created.
-     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -325,15 +322,17 @@ public class MainActivity extends AppCompatActivity {
      * @param path
      */
     private void readFromFile(String path) {
-        StringBuilder text = new StringBuilder();
+        StringBuilder text = new StringBuilder("");
         BufferedReader br = null;
         try {
             File file = new File(path);
             br = new BufferedReader(new FileReader(file));
             String line;
             while ((line = br.readLine()) != null) {
+                if (!text.toString().equals("")) {
+                    text.append("\n");
+                }
                 text.append(line);
-                text.append("\n");
             }
 
         } catch (IOException e) {
@@ -350,10 +349,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (text != null) {
-            notePad.setText(text.toString());
-            notePad.setSelection(notePad.getText().length());
-        }
+        notePad.setText(text.toString());
+        notePad.setSelection(notePad.getText().length());
     }
 
     /**

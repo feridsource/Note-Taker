@@ -23,7 +23,7 @@
                 android:textColor="@color/secondary_text"
                 android:textSize="@dimen/text_size_medium"
                 android:fontFamily="@string/fontFamilyRegular"
-                android:inputType="textCapWords"
+                android:inputType="text"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:maxLength="24"
