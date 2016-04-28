@@ -18,4 +18,6 @@
     <dimen name="CustomDialog_TextButtonGap">30dp</dimen>
     <dimen name="CustomDialog_ButtonWidth">135dp</dimen>
     <dimen name="CustomDialog_ButtonHeight">35dp</dimen>
+
+    <dimen name="elevation">4dp</dimen>
 </resources>
