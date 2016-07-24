@@ -22,5 +22,5 @@ package com.ferid.app.notetake.enums;
 public enum PermissionFor {
     NONE,
     WRITE_FILE,
-    READ_FILE;
+    READ_FILE
 }

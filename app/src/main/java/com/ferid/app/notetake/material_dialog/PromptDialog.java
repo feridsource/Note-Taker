@@ -35,9 +35,9 @@ import com.ferid.app.notetake.interfaces.PromptListener;
  */
 public class PromptDialog extends Dialog {
 
-    private TextInputLayout inputLayoutContent;
-    private EditText content;
-    private Button positiveButton;
+    private final TextInputLayout inputLayoutContent;
+    private final EditText content;
+    private final Button positiveButton;
 
     private PromptListener promptListener;
 

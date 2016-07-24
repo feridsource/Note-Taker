@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#000000</color>
-    <color name="lightBlack">#80000000</color>
-    <color name="gray">#efefef</color>
     <color name="white">#ffffff</color>
-    <color name="smoothWhite">#FCF9F9</color>
     <color name="blackish">#212121</color>
     <color name="darkGray">#727272</color>
 
@@ -13,8 +9,6 @@
 
     <color name="primary_text">@color/blackish</color>
     <color name="secondary_text">@color/darkGray</color>
-
-    <color name="defaultThemeBlue">#33B5E5</color>
 
     <color name="colourAccent">#009688</color>
     <color name="colourPrimary">#009688</color>

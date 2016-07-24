@@ -5,7 +5,8 @@
     android:background="@color/background">
 
     <include
-        layout="@layout/toolbar"/>
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
 
     <EditText
         android:id="@+id/notePad"

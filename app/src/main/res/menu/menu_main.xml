@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/item_change_widget_bg"
+        android:title="@string/makeBgOpaque"
+        android:orderInCategory="7"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/item_upload"
         android:title="@string/upload"
         android:orderInCategory="6"
@@ -31,13 +37,13 @@
         android:title="@string/save"
         android:icon="@drawable/ic_save"
         android:orderInCategory="2"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/item_delete"
         android:title="@string/eraseAll"
         android:icon="@drawable/ic_delete"
         android:orderInCategory="1"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
 </menu>

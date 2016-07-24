@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
     //permission type for action
     private PermissionFor permissionFor = PermissionFor.NONE;
 
+    //menu
+    private Menu mMenu;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -234,11 +237,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean isFileExist(String fileName) {
         File file = new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION);
-        if (file.exists()) {
-            return true;
-        } else {
-            return false;
-        }
+
+        return file.exists();
     }
 
     /**
@@ -356,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Ask for read-write external storage permission
      */
-    public void askForPermissionExternalStorage() {
+    private void askForPermissionExternalStorage() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) { //permission yet to be granted
@@ -377,7 +377,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Request and get the permission for external storage
      */
-    public void getPermissionExternalStorage() {
+    private void getPermissionExternalStorage() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
@@ -431,6 +431,19 @@ public class MainActivity extends AppCompatActivity {
         return text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
     }
 
+    /**
+     * Change widget background menu title
+     */
+    private void updateMenuTitle() {
+        MenuItem menuItem = mMenu.findItem(R.id.item_change_widget_bg);
+
+        if (PrefsUtil.getInstance(context).isWidgetTransparent()) {
+            menuItem.setTitle(getString(R.string.makeBgOpaque));
+        } else {
+            menuItem.setTitle(getString(R.string.makeBgTransparent));
+        }
+    }
+
     @Override
     public void onBackPressed() {
         saveText();
@@ -455,6 +468,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        mMenu = menu;
+        updateMenuTitle();
 
         return true;
     }
@@ -483,6 +499,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_upload:
                 permissionFor = PermissionFor.READ_FILE;
                 askForPermissionExternalStorage();
+                return true;
+            case R.id.item_change_widget_bg:
+                PrefsUtil.getInstance(context).changeWidgetTransparency();
+                updateMenuTitle();
+                Snackbar.make(notePad, getString(R.string.bgChanged), Snackbar.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -23,6 +23,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
+
 import com.ferid.app.notetake.MainActivity;
 import com.ferid.app.notetake.R;
 import com.ferid.app.notetake.prefs.PrefsUtil;
@@ -53,8 +54,7 @@ public class NoteWidget extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         this.context = context;
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-        this.appWidgetManager = appWidgetManager;
+        this.appWidgetManager = AppWidgetManager.getInstance(context);
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.note_widget);
         thisWidget = new ComponentName(context, NoteWidget.class);
 
@@ -71,8 +71,16 @@ public class NoteWidget extends AppWidgetProvider {
      */
     private void getNote() {
         String note = PrefsUtil.getInstance(context).getNote();
-
         remoteViews.setTextViewText(R.id.note, note);
+
+        boolean isTransparent = PrefsUtil.getInstance(context).isWidgetTransparent();
+        if (isTransparent) {
+            remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource",
+                    R.drawable.bg_widget_transparent);
+        } else {
+            remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource",
+                    R.drawable.bg_widget_opaque);
+        }
 
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);

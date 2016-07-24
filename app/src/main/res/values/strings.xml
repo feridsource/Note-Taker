@@ -3,12 +3,11 @@
     <string name="app_name">Note Widget</string>
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
+    <string name="prefTransparency">IS_TRANSPARENT</string>
 
     <!-- font families -->
     <string name="fontFamilyRegular">sans-serif</string>
     <string name="fontFamilyLight">sans-serif-light</string>
-    <string name="fontFamilyThin">sans-serif-thin</string>
-    <string name="fontFamilyCondensed">sans-serif-condensed</string>
 
     <string name="noteHint">Write your note</string>
     <string name="sure">Are you sure?</string>
@@ -20,11 +19,14 @@
     <string name="listen">Listen To Me</string>
     <string name="saveAs">Save As</string>
     <string name="upload">Upload</string>
+    <string name="makeBgTransparent">Transparent Widget</string>
+    <string name="makeBgOpaque">Opaque Widget</string>
+    <string name="bgChanged">Widget background is changed</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
     <string name="grantPermission">Grant permission</string>
     <string name="ok">OK</string>
-    <string name="writeError">Problem occured during writing</string>
+    <string name="writeError">Problem occurred during writing</string>
     <string name="writeSuccess">Saved successfully</string>
 
     <string name="saveAsHint">File Name</string>

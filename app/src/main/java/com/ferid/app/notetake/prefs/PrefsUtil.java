@@ -46,8 +46,11 @@ public class PrefsUtil {
      * @return
      */
     public String getNote() {
-        String preference = prefs.getString(context.getString(R.string.prefNote), "");
-        return preference;
+        if (prefs != null) {
+            return prefs.getString(context.getString(R.string.prefNote), "");
+        } else {
+            return "";
+        }
     }
 
     /**
@@ -58,7 +61,35 @@ public class PrefsUtil {
         if (prefs != null) {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString(context.getString(R.string.prefNote), value);
-            editor.commit();
+            editor.apply();
         }
     }
+
+    /**
+     * Is widget transparent
+     * @return
+     */
+    public boolean isWidgetTransparent() {
+        if (prefs != null) {
+            return prefs.getBoolean(context.getString(R.string.prefTransparency), false);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Make widget either transparent or opaque.<br />
+     * If it is transparent, convert to opaque. Vise a versa.
+     */
+    public void changeWidgetTransparency() {
+        if (prefs != null) {
+            boolean isTransparent = prefs.getBoolean(context.getString(R.string.prefTransparency),
+                    false);
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean(context.getString(R.string.prefTransparency), !isTransparent);
+            editor.apply();
+        }
+    }
+
 }
