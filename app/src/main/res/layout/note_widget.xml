@@ -12,7 +12,9 @@
         android:layout_height="match_parent"
         android:textColor="@color/secondary_text"
         android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
         android:fontFamily="@string/fontFamilyLight"
         android:hint="@string/noteHint"
+        android:textColorHint="@color/grey"/>
 
 </LinearLayout>
