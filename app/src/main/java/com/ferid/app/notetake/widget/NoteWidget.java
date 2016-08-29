@@ -86,7 +86,7 @@ public class NoteWidget extends AppWidgetProvider {
         } else {
             backgroundDrawable = R.drawable.bg_widget_opaque;
 
-            textColour = ContextCompat.getColor(context, R.color.primary_text);
+            textColour = ContextCompat.getColor(context, R.color.secondary_text);
         }
 
         remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource", backgroundDrawable);
