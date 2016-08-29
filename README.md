@@ -2,7 +2,7 @@
 
 This is an open source simple, easy to use and fast widget.
 
-Copyright (C) 2015 Ferid Cafer
+Copyright (C) 2016 Ferid Cafer
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
