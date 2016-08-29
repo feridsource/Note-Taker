@@ -17,7 +17,7 @@
         android:gravity="top"
         android:background="@android:color/transparent"
         android:textColor="@color/primary_text"
-        android:textSize="@dimen/EditText_TextSize"
+        android:textSize="@dimen/text_size_large"
         android:fontFamily="@string/fontFamilyLight"
         android:hint="@string/noteHint"
         android:textColorHint="@color/secondary_text"

@@ -22,6 +22,7 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
 import com.ferid.app.notetake.MainActivity;
@@ -74,16 +75,26 @@ public class NoteWidget extends AppWidgetProvider {
         remoteViews.setTextViewText(R.id.note, note);
 
         boolean isTransparent = PrefsUtil.getInstance(context).isWidgetTransparent();
+
+        int textColour;
+        int backgroundDrawable;
+
         if (isTransparent) {
-            remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource",
-                    R.drawable.bg_widget_transparent);
+            backgroundDrawable = R.drawable.bg_widget_transparent;
+
+            textColour = ContextCompat.getColor(context, R.color.smooth_white);
         } else {
-            remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource",
-                    R.drawable.bg_widget_opaque);
+            backgroundDrawable = R.drawable.bg_widget_opaque;
+
+            textColour = ContextCompat.getColor(context, R.color.primary_text);
         }
 
+        remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource", backgroundDrawable);
+        remoteViews.setTextColor(R.id.note, textColour);
+
         Intent intent = new Intent(context, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setOnClickPendingIntent(R.id.layoutBackground, pendingIntent);
         remoteViews.setBoolean(R.id.layoutBackground, "setEnabled", true);
 
