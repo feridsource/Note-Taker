@@ -4,17 +4,16 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/bg_widget_opaque">
+              android:background="@drawable/bg_widget">
 
     <TextView
         android:id="@+id/note"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/secondary_text"
-        android:textSize="@dimen/text_size_large"
-        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_size_medium"
         android:fontFamily="@string/fontFamilyLight"
         android:hint="@string/noteHint"
-        android:textColorHint="@color/grey"/>
+        android:textColorHint="@color/secondary_text"/>
 
 </LinearLayout>

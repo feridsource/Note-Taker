@@ -3,7 +3,6 @@
     <string name="app_name">Note Widget</string>
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
-    <string name="prefTransparency">IS_TRANSPARENT</string>
 
     <!-- font families -->
     <string name="fontFamilyRegular">sans-serif</string>
@@ -19,9 +18,6 @@
     <string name="listen">Listen To Me</string>
     <string name="saveAs">Save As</string>
     <string name="upload">Upload</string>
-    <string name="makeBgTransparent">Transparent Widget</string>
-    <string name="makeBgOpaque">Opaque Widget</string>
-    <string name="bgChanged">Widget background is changed</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
     <string name="grantPermission">Grant permission</string>

@@ -8,8 +8,8 @@ android {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 24
-        versionName "4.3.0"
+        versionCode 25
+        versionName "4.4.0"
 
         generatedDensities = []
     }

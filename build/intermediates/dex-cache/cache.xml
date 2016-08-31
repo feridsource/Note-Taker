@@ -47,7 +47,7 @@
         jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="a04a6f38ede39c9bea6186ee5130b3c0e1bfb5af">
+        sha1="23a5acc6fd5b9f21e9d239a89a0aa6ba92383e5c">
         <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3761d157439a78a391668ae76a91721002fb1585\classes.dex" />
     </item>
     <item
@@ -68,7 +68,7 @@
         jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="34c35de1c09c5ab445ff5365bd8802e31c5cc076">
+        sha1="1439f2ef81837752ba053b9ffccbb71cbe4092f1">
         <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d0ce1154fa2a8c6baa521dca6e79a1de861bfd2d\classes.dex" />
     </item>
 

@@ -4,19 +4,19 @@
 
     <!-- view background color -->
     <solid
-            android:color="@color/white" >
+            android:color="@color/white">
     </solid>
 
     <padding
-        android:top="2dp"
-        android:bottom="2dp"
-        android:left="@dimen/default_margin"
-        android:right="@dimen/default_margin">
+        android:top="@dimen/margin_tiny"
+        android:bottom="@dimen/margin_tiny"
+        android:left="@dimen/margin_small"
+        android:right="@dimen/margin_small">
     </padding>
 
     <!-- Here is the corner radius -->
     <corners
-            android:radius="3dp"   >
+            android:radius="3dp">
     </corners>
 
 </shape>

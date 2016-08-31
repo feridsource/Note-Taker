@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
-    <color name="smooth_white">#FCF9F9</color>
     <color name="blackish">#212121</color>
     <color name="dark_grey">#727272</color>
-    <color name="grey">#b6b6b6</color>
 
     <color name="background">@color/white</color>
-    <color name="transparent_background">#00000000</color>
 
     <color name="primary_text">@color/blackish</color>
     <color name="secondary_text">@color/dark_grey</color>

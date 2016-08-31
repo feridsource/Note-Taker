@@ -22,7 +22,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
 import com.ferid.app.notetake.MainActivity;
@@ -73,24 +72,6 @@ public class NoteWidget extends AppWidgetProvider {
     private void getNote() {
         String note = PrefsUtil.getInstance(context).getNote();
         remoteViews.setTextViewText(R.id.note, note);
-
-        boolean isTransparent = PrefsUtil.getInstance(context).isWidgetTransparent();
-
-        int textColour;
-        int backgroundDrawable;
-
-        if (isTransparent) {
-            backgroundDrawable = R.drawable.bg_widget_transparent;
-
-            textColour = ContextCompat.getColor(context, R.color.smooth_white);
-        } else {
-            backgroundDrawable = R.drawable.bg_widget_opaque;
-
-            textColour = ContextCompat.getColor(context, R.color.secondary_text);
-        }
-
-        remoteViews.setInt(R.id.layoutBackground, "setBackgroundResource", backgroundDrawable);
-        remoteViews.setTextColor(R.id.note, textColour);
 
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent,

@@ -72,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
     //permission type for action
     private PermissionFor permissionFor = PermissionFor.NONE;
 
-    //menu
-    private Menu mMenu;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -416,8 +413,6 @@ public class MainActivity extends AppCompatActivity {
                     //back to its initial state
                     permissionFor = PermissionFor.NONE;
                 }
-
-                return;
             }
         }
     }
@@ -429,19 +424,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private String capitalizeFirstLetter(String text) {
         return text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
-    }
-
-    /**
-     * Change widget background menu title
-     */
-    private void updateMenuTitle() {
-        MenuItem menuItem = mMenu.findItem(R.id.item_change_widget_bg);
-
-        if (PrefsUtil.getInstance(context).isWidgetTransparent()) {
-            menuItem.setTitle(getString(R.string.makeBgOpaque));
-        } else {
-            menuItem.setTitle(getString(R.string.makeBgTransparent));
-        }
     }
 
     @Override
@@ -468,16 +450,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
-        mMenu = menu;
-        updateMenuTitle();
-
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.item_save:
                 saveText();
@@ -499,11 +476,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_upload:
                 permissionFor = PermissionFor.READ_FILE;
                 askForPermissionExternalStorage();
-                return true;
-            case R.id.item_change_widget_bg:
-                PrefsUtil.getInstance(context).changeWidgetTransparency();
-                updateMenuTitle();
-                Snackbar.make(notePad, getString(R.string.bgChanged), Snackbar.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -547,9 +519,7 @@ public class MainActivity extends AppCompatActivity {
                                 Snackbar.LENGTH_LONG).show();
                     }
                 } else {
-                    if (filePath != null) {
-                        readFromFile(filePath);
-                    }
+                    readFromFile(filePath);
                 }
             }
         }
