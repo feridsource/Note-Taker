@@ -1,21 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
-        targetSdkVersion 23
-        versionCode 25
-        versionName "4.4.0"
+        targetSdkVersion 24
+        versionCode 26
+        versionName "4.5.0"
 
-        generatedDensities = []
+        vectorDrawables.generatedDensities = ['mdpi','hdpi','xhdpi','xxhdpi']
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -29,8 +29,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //support lib
-    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
 
     //design
-    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:design:24.2.1'
 }

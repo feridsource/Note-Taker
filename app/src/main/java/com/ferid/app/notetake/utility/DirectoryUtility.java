@@ -26,7 +26,7 @@ import java.io.File;
 public class DirectoryUtility {
     //application's folder path
     private static final String PATH_FOLDER = Environment.getExternalStorageDirectory()
-            + "/note_taker/";
+            + "/note_widget/";
 
     /**
      * Checks if external storage is available for read and write

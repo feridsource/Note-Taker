@@ -27,7 +27,8 @@
         <activity android:name=".MainActivity"
             android:launchMode="singleTop"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysVisible" />
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:resizeableActivity="true"/>
 
     </application>
 

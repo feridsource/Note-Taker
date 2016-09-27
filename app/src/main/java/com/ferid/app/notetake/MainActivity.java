@@ -398,21 +398,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_EXTERNAL_STORAGE: {
-                //if request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    if (permissionFor == PermissionFor.READ_FILE) {
-                        browseFiles();
-                    } else if (permissionFor == PermissionFor.WRITE_FILE) {
-                        getFileName();
-                    }
+        if (requestCode == REQUEST_EXTERNAL_STORAGE) {
+            //if request is cancelled, the result arrays are empty.
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    //back to its initial state
-                    permissionFor = PermissionFor.NONE;
+                if (permissionFor == PermissionFor.READ_FILE) {
+                    browseFiles();
+                } else if (permissionFor == PermissionFor.WRITE_FILE) {
+                    getFileName();
                 }
+
+                //back to its initial state
+                permissionFor = PermissionFor.NONE;
             }
         }
     }
