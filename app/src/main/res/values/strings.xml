@@ -17,7 +17,7 @@
     <string name="share">Share Notes</string>
     <string name="listen">Listen To Me</string>
     <string name="saveAs">Save As</string>
-    <string name="upload">Upload</string>
+    <string name="open">Open File</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
     <string name="grantPermission">Grant permission</string>
