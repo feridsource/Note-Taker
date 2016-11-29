@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
-        targetSdkVersion 24
-        versionCode 27
-        versionName "4.5.1"
+        targetSdkVersion 25
+        versionCode 28
+        versionName "4.5.2"
 
-        vectorDrawables.generatedDensities = ['mdpi','hdpi','xhdpi','xxhdpi']
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -29,8 +29,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //support lib
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
 
     //design
-    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:design:25.0.1'
 }

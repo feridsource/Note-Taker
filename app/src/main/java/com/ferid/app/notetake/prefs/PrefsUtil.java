@@ -25,30 +25,29 @@ import com.ferid.app.notetake.R;
  * Created by ferid.cafer on 11/10/2014.
  */
 public class PrefsUtil {
-    private static volatile PrefsUtil instance = null;
-    private static SharedPreferences prefs;
-    private static Context context;
 
-    public static PrefsUtil getInstance(Context context__) {
-        if (instance == null) {
-            synchronized (PrefsUtil.class){
-                if (instance == null) {
-                    instance = new PrefsUtil();
-                    context = context__;
-                    prefs = context.getSharedPreferences(context.getString(R.string.sharedPreferences), 0);
-                }
-            }
-        }
-        return instance;
+    private static SharedPreferences sPrefs;
+
+    /**
+     * Initialise shared preferences
+     * @param context
+     */
+    private static void initialisePrefs(Context context) {
+        sPrefs = context.getSharedPreferences(context.getString(R.string.sharedPreferences), 0);
     }
 
     /**
      * Get latest update date by day of year
+     * @param context
      * @return
      */
-    public String getNote() {
-        if (prefs != null) {
-            return prefs.getString(context.getString(R.string.prefNote), "");
+    public static String getNote(Context context) {
+        if (sPrefs == null) {
+            initialisePrefs(context);
+        }
+
+        if (sPrefs != null) {
+            return sPrefs.getString(context.getString(R.string.prefNote), "");
         } else {
             return "";
         }
@@ -56,13 +55,19 @@ public class PrefsUtil {
 
     /**
      * Set latest update date by day of year
+     * @param context
      * @param value
      */
-    public void setNote(String value) {
-        if (prefs != null) {
-            SharedPreferences.Editor editor = prefs.edit();
+    public static void setNote(Context context, String value) {
+        if (sPrefs == null) {
+            initialisePrefs(context);
+        }
+
+        if (sPrefs != null) {
+            SharedPreferences.Editor editor = sPrefs.edit();
             editor.putString(context.getString(R.string.prefNote), value);
             editor.apply();
         }
     }
+
 }

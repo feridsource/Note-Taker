@@ -2,175 +2,166 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="b6d4efd99d5ecc17fcb9252a4bc86bf55ec03d2d">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d0ce1154fa2a8c6baa521dca6e79a1de861bfd2d\classes.dex" />
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-fragment-25.0.1_b1e419e456c350a33ce84b67962fcf2aec6b9d59.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_fd543fa6cbbb8c04683c0e59257dc99206fbeeb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\design\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-design-25.0.1_1acd9e1393a058d558e70f634293271148487b93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-25.0.1_7e3b0247dd88f587921cd52167ffa619c6c223b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-compat-25.0.1_2d28d3e026c8187238d02c412863697bd4febc4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\support-annotations-25.0.1_1cd9e1b1ba06af5699c96a0de2544264b0c7670d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-core-utils-25.0.1_c51dec109dfd84db4da9f5b1d799b7d5e1464cdd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-25.0.1_97b8e969ade869df06300a7f739ef249a5dc9e39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-media-compat-25.0.1_58f90ce367e94ec31f2964ce510374d08a331edb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_ebeb9aee06c6954c0387cb02dc97df647e08df09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_a73f9dcd20c78315fc305209decb58f74ef35e49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-25.0.1_7168e05ae4b430fd05b8e2eaa2b09ed0df17ec2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-25.0.1_4dbaa5a20ab41b5ed3f64ae4059c7014570b6142.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_d7321d29ebe9d84a872bc2dd502a5fb93609e06a\classes.dex" />
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-25.0.1_910faacd8acb0e19ef36890f4f34ac42691d4eba.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_62719109f4b5320d32b16eab6eb87acf62d56dfd\classes.dex" />
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_8d70ef66b0b6f4539ca456f2491b86fb6742db7a.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_3dbe2fd7aaebc8046d715903cf98505772c8c4f3\classes.dex" />
+        revision="25.0.1"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-transition-25.0.1_037f42133b4603912c5a10a84effdf30b0ba518b.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_aa05ef507cd2a9ed5c784914254349ea0447e539\classes.dex" />
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_226519cab424d188b29a67035c4f6df43f7b3df1.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_9abe7f8c70982e6564e75782891e2f9800ae755d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_3dee8416cb5943dedc1712e5ec44c9e713fcbaae\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d837dba716ede8dcc25ce545a6b8dc6352b40ee4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_30008e1f5624305f80ec304ff7c504d1c7e939e5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_6f685a097aee8b05b4cf57cf9569a037b959e4ad\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="42f51a55f3179a4756f61a78b5690c85d3889855">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3761d157439a78a391668ae76a91721002fb1585\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_9e75d12c2b7a704592531260708e0ca77572d9d5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_5b2f342a7897c0d17047f868054bb772d748a98c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_1197abd9989dbeecbab84bd760bec46c65cf27d6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_8a8756c4e3d35dc59b3d40f7196b6d7bd1127c74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2ccdd88d5795ab6f1ba956a258d8e2d2de32c68d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_ab3b9f2ccd738b5265d7ef163758d6ecd527d8ed\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_9360a25f93fb0259446056c6b866f2d610b5d30a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_826ce50c9bd67038713452d6b81ffb3bb425402f\classes.dex" />
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\ferid.cafer\Documents\MyProjects\Note-Taker\app\build\intermediates\pre-dexed\release\com.android.support-support-core-ui-25.0.1_ec1b4583dd48ee8bf9eab2a2e16eba5256a7c1f7.jar" />
     </item>
 
 </items>

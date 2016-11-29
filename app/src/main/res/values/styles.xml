@@ -13,7 +13,7 @@
     </style>
 
     <style name="ActionButtonOverflow" parent="Base.Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_settings</item>
+        <item name="android:tint">@color/white</item>
     </style>
 
 </resources>

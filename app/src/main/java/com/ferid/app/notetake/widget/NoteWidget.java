@@ -70,7 +70,7 @@ public class NoteWidget extends AppWidgetProvider {
      * Read note
      */
     private void getNote() {
-        String note = PrefsUtil.getInstance(context).getNote();
+        String note = PrefsUtil.getNote(context);
         remoteViews.setTextViewText(R.id.note, note);
 
         Intent intent = new Intent(context, MainActivity.class);
@@ -80,6 +80,6 @@ public class NoteWidget extends AppWidgetProvider {
         remoteViews.setBoolean(R.id.layoutBackground, "setEnabled", true);
 
         appWidgetManager.updateAppWidget(thisWidget, remoteViews);
-
     }
+
 }

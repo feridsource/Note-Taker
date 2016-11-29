@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                String note = PrefsUtil.getInstance(context).getNote();
+                String note = PrefsUtil.getNote(context);
 
                 writeIntoNote(note);
             }
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void saveText() {
         if (notePad != null) {
-            PrefsUtil.getInstance(context).setNote(notePad.getText().toString());
+            PrefsUtil.setNote(context, notePad.getText().toString());
 
             updateNoteWidget();
         }
