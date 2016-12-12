@@ -8,8 +8,8 @@ android {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 28
-        versionName "4.5.2"
+        versionCode 29
+        versionName "4.5.3"
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -18,10 +18,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    aaptOptions {
-        additionalParameters "--no-version-vectors"
     }
 }
 
