@@ -2,6 +2,11 @@
 
 This is an open source simple, easy to use and fast widget.
 
+[Play Store](https://play.google.com/store/apps/details?id=com.ferid.app.notetake)
+
+
+# Licence
+
 Copyright (C) 2016 Ferid Cafer
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,5 +20,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-[Play Store](https://play.google.com/store/apps/details?id=com.ferid.app.notetake)
