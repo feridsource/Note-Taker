@@ -25,7 +25,7 @@
                 android:fontFamily="@string/fontFamilyRegular"
                 android:inputType="text"
                 android:imeOptions="actionDone"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:maxLength="24"
                 android:hint="@string/saveAsHint"/>
 
