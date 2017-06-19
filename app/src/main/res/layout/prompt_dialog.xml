@@ -43,6 +43,7 @@
             android:layout_width="64dp"
             android:layout_height="48dp"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:padding="8dp"
             style="?android:attr/borderlessButtonStyle"
             android:textSize="@dimen/text_size_small"

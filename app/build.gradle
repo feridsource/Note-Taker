@@ -8,8 +8,8 @@ android {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 30
-        versionName "4.5.4"
+        versionCode 31
+        versionName "4.6.0"
 
         vectorDrawables.useSupportLibrary = true
     }
