@@ -46,11 +46,7 @@ public class PrefsUtil {
             initialisePrefs(context);
         }
 
-        if (sPrefs != null) {
-            return sPrefs.getString(context.getString(R.string.prefNote), "");
-        } else {
-            return "";
-        }
+        return sPrefs.getString(context.getString(R.string.prefNote), "");
     }
 
     /**
@@ -63,11 +59,9 @@ public class PrefsUtil {
             initialisePrefs(context);
         }
 
-        if (sPrefs != null) {
-            SharedPreferences.Editor editor = sPrefs.edit();
-            editor.putString(context.getString(R.string.prefNote), value);
-            editor.apply();
-        }
+        SharedPreferences.Editor editor = sPrefs.edit();
+        editor.putString(context.getString(R.string.prefNote), value);
+        editor.apply();
     }
 
 }
