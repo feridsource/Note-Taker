@@ -44,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1898">
@@ -52,20 +52,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4292#4316#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrefsUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/prefs/PrefsUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="48" column="74" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#1825#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#1369#1405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2939,6 +2925,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/prefs/PrefsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="74" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#1825#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1369#1405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1898">
@@ -2946,18 +2944,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4292#4316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/prefs/PrefsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="48" column="74" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#1825#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1369#1405#0" expanded="true" />
           </folding>
         </state>
       </provider>
