@@ -29,6 +29,8 @@ import com.ferid.app.notetake.MainActivity;
 import com.ferid.app.notetake.R;
 import com.ferid.app.notetake.prefs.PrefsUtil;
 
+import java.util.Objects;
+
 /**
  * Created by ferid.cafer on 11/10/2014.
  */
@@ -59,7 +61,7 @@ public class NoteWidget extends AppWidgetProvider {
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.note_widget);
         thisWidget = new ComponentName(context, NoteWidget.class);
 
-        if (intent.getAction().equals(APP_TO_WID)) {
+        if (Objects.equals(intent.getAction(), APP_TO_WID)) {
             if (remoteViews != null) {
                 getNote();
             }
@@ -73,7 +75,8 @@ public class NoteWidget extends AppWidgetProvider {
     private void getNote() {
         String note = PrefsUtil.getNote(context);
         remoteViews.setTextViewText(R.id.note, note);
-        remoteViews.setTextViewTextSize(R.id.note, TypedValue.COMPLEX_UNIT_SP, PrefsUtil.getFontSize(context));
+        remoteViews.setTextViewTextSize(R.id.note,
+                TypedValue.COMPLEX_UNIT_SP, PrefsUtil.getFontSize(context));
 
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent,

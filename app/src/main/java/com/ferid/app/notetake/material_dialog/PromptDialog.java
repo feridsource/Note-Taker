@@ -47,9 +47,9 @@ public class PromptDialog extends Dialog {
         setContentView(R.layout.prompt_dialog);
 
 
-        inputLayoutContent = (TextInputLayout) findViewById(R.id.inputLayoutContent);
-        content = (EditText) findViewById(R.id.content);
-        positiveButton = (Button) findViewById(R.id.positiveButton);
+        inputLayoutContent = findViewById(R.id.inputLayoutContent);
+        content = findViewById(R.id.content);
+        positiveButton = findViewById(R.id.positiveButton);
 
         content.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

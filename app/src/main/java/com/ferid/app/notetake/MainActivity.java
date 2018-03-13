@@ -367,16 +367,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int which) {
                 switch (which) {
                     case 0:
-                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_small));
+                        PrefsUtil.setFontSize(context,
+                                getResources().getInteger(R.integer.font_size_small));
                         break;
                     case 1:
-                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_medium));
+                        PrefsUtil.setFontSize(context,
+                                getResources().getInteger(R.integer.font_size_medium));
                         break;
                     case 2:
-                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_large));
+                        PrefsUtil.setFontSize(context,
+                                getResources().getInteger(R.integer.font_size_large));
                         break;
                     default:
-                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_medium));
+                        PrefsUtil.setFontSize(context,
+                                getResources().getInteger(R.integer.font_size_medium));
                         break;
                 }
 
@@ -543,7 +547,7 @@ public class MainActivity extends AppCompatActivity {
             appendNote(spokenText);
 
         } else  if (requestCode == REQUEST_IMPORT_TXT) {
-            if (resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK && data.getData() != null) {
                 String filePath = data.getData().getPath();
 
                 //only sqlite extension is allowed

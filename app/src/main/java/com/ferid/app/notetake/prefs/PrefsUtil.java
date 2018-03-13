@@ -74,7 +74,8 @@ public class PrefsUtil {
             initialisePrefs(context);
         }
 
-        return sPrefs.getInt(context.getString(R.string.prefFontSize), 0);
+        return sPrefs.getInt(context.getString(R.string.prefFontSize),
+                context.getResources().getInteger(R.integer.font_size_medium));
     }
 
     /**
