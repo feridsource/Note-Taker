@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     android:background="@color/background">
 
     <include
@@ -12,7 +13,6 @@
         android:id="@+id/notePad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
         android:paddingTop="@dimen/margin_small"
         android:paddingBottom="@dimen/margin_small"
         android:paddingLeft="@dimen/margin_big"
@@ -20,7 +20,6 @@
         android:gravity="top"
         android:background="@android:color/transparent"
         android:textColor="@color/primary_text"
-        android:textSize="@dimen/text_size_medium"
         android:fontFamily="@string/fontFamilyLight"
         android:hint="@string/noteHint"
         android:textColorHint="@color/secondary_text"
@@ -29,4 +28,4 @@
         android:focusableInTouchMode="true"
         android:scrollbars="vertical"/>
 
-</RelativeLayout>
+</LinearLayout>

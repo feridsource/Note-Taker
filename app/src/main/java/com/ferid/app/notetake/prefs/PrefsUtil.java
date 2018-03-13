@@ -64,4 +64,32 @@ public class PrefsUtil {
         editor.apply();
     }
 
+    /**
+     * Get font size
+     * @param context
+     * @return
+     */
+    public static int getFontSize(Context context) {
+        if (sPrefs == null) {
+            initialisePrefs(context);
+        }
+
+        return sPrefs.getInt(context.getString(R.string.prefFontSize), 0);
+    }
+
+    /**
+     * Set font size
+     * @param context
+     * @param value
+     */
+    public static void setFontSize(Context context, int value) {
+        if (sPrefs == null) {
+            initialisePrefs(context);
+        }
+
+        SharedPreferences.Editor editor = sPrefs.edit();
+        editor.putInt(context.getString(R.string.prefFontSize), value);
+        editor.apply();
+    }
+
 }

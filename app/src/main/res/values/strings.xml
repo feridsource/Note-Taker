@@ -3,6 +3,7 @@
     <string name="app_name">Note Widget</string>
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
+    <string name="prefFontSize">FONT_SIZE</string>
 
     <!-- font families -->
     <string name="fontFamilyRegular">sans-serif</string>
@@ -13,17 +14,19 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="eraseAll">Erase All</string>
-    <string name="save">Save and Close</string>
+    <string name="save_close">Save and Close</string>
     <string name="share">Share Notes</string>
     <string name="listen">Listen To Me</string>
     <string name="saveAs">Save As</string>
     <string name="open">Open File</string>
+    <string name="fontSize">Font Size</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
     <string name="grantPermission">Grant permission</string>
     <string name="ok">OK</string>
     <string name="writeError">Problem occurred during writing</string>
     <string name="writeSuccess">Saved successfully</string>
+    <string name="save">Save</string>
 
     <string name="saveAsHint">File Name</string>
     <string name="fileAlreadyExists">File already exists</string>
@@ -32,5 +35,9 @@
     <string name="uploadError">Upload error</string>
     <string name="mountExternalStorage">Please mount external storage</string>
     <string name="extensionWarning">Please use txt file</string>
+
+    <string name="font_size_small">Small</string>
+    <string name="font_size_medium">Medium</string>
+    <string name="font_size_big">Big</string>
 
 </resources>

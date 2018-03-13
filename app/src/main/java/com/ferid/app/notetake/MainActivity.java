@@ -35,10 +35,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -80,10 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
         context = this;
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        notePad = (EditText) findViewById(R.id.notePad);
+        notePad = findViewById(R.id.notePad);
+
+        setFontSize();
 
         getText();
     }
@@ -197,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void getFileName() {
         final PromptDialog promptDialog = new PromptDialog(context);
-        promptDialog.setPositiveButton(getString(R.string.ok));
+        promptDialog.setPositiveButton(getString(R.string.save));
         promptDialog.setOnPositiveClickListener(new PromptListener() {
             @Override
             public void OnPrompt(String promptText) {
@@ -351,6 +355,46 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Ask font size
+     */
+    private void askFontSize() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1);
+        arrayAdapter.addAll(getResources().getStringArray(R.array.font_sizes));
+        builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                switch (which) {
+                    case 0:
+                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_small));
+                        break;
+                    case 1:
+                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_medium));
+                        break;
+                    case 2:
+                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_large));
+                        break;
+                    default:
+                        PrefsUtil.setFontSize(context, getResources().getInteger(R.integer.font_size_medium));
+                        break;
+                }
+
+                setFontSize();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    /**
+     * Set font size
+     */
+    private void setFontSize() {
+        notePad.setTextSize(TypedValue.COMPLEX_UNIT_SP, PrefsUtil.getFontSize(context));
+    }
+
+    /**
      * Ask for read-write external storage permission
      */
     private void askForPermissionExternalStorage() {
@@ -475,6 +519,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_upload:
                 permissionFor = PermissionFor.READ_FILE;
                 askForPermissionExternalStorage();
+                return true;
+            case R.id.item_size:
+                askFontSize();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

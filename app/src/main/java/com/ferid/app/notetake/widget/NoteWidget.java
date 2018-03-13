@@ -22,6 +22,7 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.util.TypedValue;
 import android.widget.RemoteViews;
 
 import com.ferid.app.notetake.MainActivity;
@@ -72,6 +73,7 @@ public class NoteWidget extends AppWidgetProvider {
     private void getNote() {
         String note = PrefsUtil.getNote(context);
         remoteViews.setTextViewText(R.id.note, note);
+        remoteViews.setTextViewTextSize(R.id.note, TypedValue.COMPLEX_UNIT_SP, PrefsUtil.getFontSize(context));
 
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent,

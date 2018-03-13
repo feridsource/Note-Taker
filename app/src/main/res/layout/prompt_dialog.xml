@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_big"
         android:paddingLeft="@dimen/margin_big"
         android:paddingRight="@dimen/margin_big">
 
@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
-                android:textSize="@dimen/text_size_medium"
+                android:textSize="16sp"
                 android:fontFamily="@string/fontFamilyRegular"
                 android:inputType="text"
                 android:imeOptions="actionDone"
@@ -36,7 +36,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="@dimen/margin_big">
 
         <Button
             android:id="@+id/positiveButton"
@@ -46,7 +46,7 @@
             android:layout_alignParentEnd="true"
             android:padding="8dp"
             style="?android:attr/borderlessButtonStyle"
-            android:textSize="@dimen/text_size_small"
+            android:textSize="12sp"
             android:textColor="@color/colour_primary_dark"
             android:textStyle="bold"
             android:fontFamily="@string/fontFamilyRegular"/>
