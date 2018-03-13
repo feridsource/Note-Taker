@@ -25,3 +25,6 @@
 # v7 support
 -keep class android.support.v7.widget.** { *; }
 -keep interface android.support.v7.widget.** { *; }
+
+# deobfuscate
+-printmapping mapping.txt

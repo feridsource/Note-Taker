@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "com.ferid.app.notetake"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 27
         versionCode 31
         versionName "4.6.0"
 
@@ -16,17 +15,19 @@ android {
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
+def supportLibVersion = "27.1.0"
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //support lib
-    compile 'com.android.support:appcompat-v7:25.3.1'
-
+    compile "com.android.support:appcompat-v7:$supportLibVersion"
     //design
-    compile 'com.android.support:design:25.3.1'
+    compile "com.android.support:design:$supportLibVersion"
 }
