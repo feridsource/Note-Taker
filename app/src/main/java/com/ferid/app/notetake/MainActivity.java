@@ -359,6 +359,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void changeFontSize() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.fontSize));
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1);
         arrayAdapter.addAll(getResources().getStringArray(R.array.font_sizes));
