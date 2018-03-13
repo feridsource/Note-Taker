@@ -355,9 +355,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Ask font size
+     * Ask user to change font size
      */
-    private void askFontSize() {
+    private void changeFontSize() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1);
@@ -525,7 +525,7 @@ public class MainActivity extends AppCompatActivity {
                 askForPermissionExternalStorage();
                 return true;
             case R.id.item_size:
-                askFontSize();
+                changeFontSize();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

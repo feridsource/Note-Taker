@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Note Widget</string>
+    <string name="app_name">Note Taker</string>
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
     <string name="prefFontSize">FONT_SIZE</string>
@@ -9,7 +9,7 @@
     <string name="fontFamilyRegular">sans-serif</string>
     <string name="fontFamilyLight">sans-serif-light</string>
 
-    <string name="noteHint">Write your note</string>
+    <string name="noteHint">Your note</string>
     <string name="sure">Are you sure?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
