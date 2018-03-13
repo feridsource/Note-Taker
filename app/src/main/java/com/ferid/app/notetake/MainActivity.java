@@ -46,7 +46,7 @@ import android.widget.Toast;
 
 import com.ferid.app.notetake.enums.PermissionFor;
 import com.ferid.app.notetake.interfaces.PromptListener;
-import com.ferid.app.notetake.material_dialog.PromptDialog;
+import com.ferid.app.notetake.dialogs.PromptDialog;
 import com.ferid.app.notetake.prefs.PrefsUtil;
 import com.ferid.app.notetake.utility.DirectoryUtility;
 import com.ferid.app.notetake.widget.NoteWidget;

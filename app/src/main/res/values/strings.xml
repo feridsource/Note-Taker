@@ -30,11 +30,12 @@
 
     <string name="saveAsHint">File Name</string>
     <string name="fileAlreadyExists">File already exists</string>
-    <string name="overwrite">Overwrite</string>
+    <string name="overwrite">OVERWRITE</string>
     <string name="selectFile">Select txt File to Upload</string>
     <string name="uploadError">Upload error</string>
     <string name="mountExternalStorage">Please mount external storage</string>
     <string name="extensionWarning">Please use txt file</string>
+    <string name="enterFileName">Enter file name</string>
 
     <string name="font_size_small">Small</string>
     <string name="font_size_medium">Medium</string>

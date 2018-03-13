@@ -12,6 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10101a08-3bbd-4be2-95a0-32599e3c20d4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-14-59-25-429.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-15-11-48-347.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-15-12-56-715.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-14-59-25-429.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-15-11-48-347.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-15-12-56-715.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/material_dialog/PromptDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/dialogs/PromptDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
@@ -22,6 +29,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="Note-Taker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,71 +61,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="355" column="0" lean-forward="true" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+            <state relative-caret-position="122">
+              <caret line="217" column="83" lean-forward="false" selection-start-line="217" selection-start-column="83" selection-end-line="217" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3079#3269#0" expanded="true" />
-                <element signature="e#3268#3269#0" expanded="true" />
-                <element signature="e#4303#4320#0" expanded="true" />
-                <element signature="e#4363#4387#0" expanded="true" />
-                <element signature="e#4437#4460#0" expanded="true" />
-                <element signature="e#4723#4745#0" expanded="true" />
-                <element signature="e#5303#5331#0" expanded="true" />
-                <element signature="e#5460#5485#0" expanded="true" />
-                <element signature="e#5966#6014#0" expanded="true" />
-                <element signature="e#6346#6370#0" expanded="true" />
-                <element signature="e#6421#7428#0" expanded="true" />
-                <element signature="e#6848#6885#0" expanded="true" />
-                <element signature="e#6951#6980#0" expanded="true" />
-                <element signature="e#7014#7355#0" expanded="true" />
-                <element signature="e#7354#7355#0" expanded="true" />
-                <element signature="e#7427#7428#0" expanded="true" />
-                <element signature="e#9122#9154#0" expanded="true" />
-                <element signature="e#9270#9300#0" expanded="true" />
-                <element signature="e#9422#9462#0" expanded="true" />
-                <element signature="e#10013#10043#0" expanded="true" />
-                <element signature="e#10158#10189#0" expanded="true" />
-                <element signature="e#10312#10352#0" expanded="true" />
-                <element signature="e#11040#11071#0" expanded="true" />
-                <element signature="e#11312#11343#0" expanded="true" />
-                <element signature="e#11735#11763#0" expanded="true" />
-                <element signature="e#12016#13069#0" expanded="true" />
-                <element signature="e#12304#12356#0" expanded="true" />
-                <element signature="e#12505#12558#0" expanded="true" />
-                <element signature="e#12707#12759#0" expanded="true" />
-                <element signature="e#12909#12962#0" expanded="true" />
-                <element signature="e#13068#13069#0" expanded="true" />
-                <element signature="e#14355#14379#0" expanded="true" />
-                <element signature="e#14454#14465#0" expanded="true" />
-                <element signature="e#14467#14869#0" expanded="true" />
-                <element signature="e#14868#14869#0" expanded="true" />
-                <element signature="e#18885#18921#0" expanded="true" />
-                <element signature="e#19457#19488#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="PromptDialog.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/dialogs/PromptDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2955#2996#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,6 +94,12 @@
         <option value="valueResourceFile" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>inputLayoutContent</find>
+      <find>file name</find>
+    </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="KEY_STORE_PATH" value="C:\Users\ferid.cafer\Documents\ferid.jks" />
@@ -1886,12 +1856,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/prefs/PrefsUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/prompt_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/widget/NoteWidget.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/material_dialog/PromptDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/material_dialog/PromptDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/dialogs/PromptDialog.java" />
       </list>
     </option>
   </component>
@@ -2042,7 +2013,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prefs" />
+              <option name="myItemId" value="dialogs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2165,7 +2136,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520942339602" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520943280593" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2213,7 +2184,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520942339602" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520943280594" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2396,7 +2367,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520942339604" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520943280595" />
       </method>
     </configuration>
     <list size="1">
@@ -2599,7 +2570,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
@@ -2734,43 +2705,6 @@
           <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3079#3269#0" expanded="true" />
-            <element signature="e#3268#3269#0" expanded="true" />
-            <element signature="e#4303#4320#0" expanded="true" />
-            <element signature="e#4363#4387#0" expanded="true" />
-            <element signature="e#4437#4460#0" expanded="true" />
-            <element signature="e#4723#4745#0" expanded="true" />
-            <element signature="e#5303#5331#0" expanded="true" />
-            <element signature="e#5460#5485#0" expanded="true" />
-            <element signature="e#5966#6014#0" expanded="true" />
-            <element signature="e#6346#6370#0" expanded="true" />
-            <element signature="e#6421#7428#0" expanded="true" />
-            <element signature="e#6848#6885#0" expanded="true" />
-            <element signature="e#6951#6980#0" expanded="true" />
-            <element signature="e#7014#7355#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
-            <element signature="e#7427#7428#0" expanded="true" />
-            <element signature="e#9122#9154#0" expanded="true" />
-            <element signature="e#9270#9300#0" expanded="true" />
-            <element signature="e#9422#9462#0" expanded="true" />
-            <element signature="e#10013#10043#0" expanded="true" />
-            <element signature="e#10158#10189#0" expanded="true" />
-            <element signature="e#10312#10352#0" expanded="true" />
-            <element signature="e#11040#11071#0" expanded="true" />
-            <element signature="e#11312#11343#0" expanded="true" />
-            <element signature="e#11735#11763#0" expanded="true" />
-            <element signature="e#12016#13069#0" expanded="true" />
-            <element signature="e#12304#12356#0" expanded="true" />
-            <element signature="e#12505#12558#0" expanded="true" />
-            <element signature="e#12707#12759#0" expanded="true" />
-            <element signature="e#12909#12962#0" expanded="true" />
-            <element signature="e#13068#13069#0" expanded="true" />
-            <element signature="e#14355#14379#0" expanded="true" />
-            <element signature="e#14454#14465#0" expanded="true" />
-            <element signature="e#14467#14869#0" expanded="true" />
-            <element signature="e#14868#14869#0" expanded="true" />
-            <element signature="e#18885#18921#0" expanded="true" />
-            <element signature="e#19457#19488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2939,17 +2873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/prompt_dialog.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/content/Intent.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -2957,16 +2880,6 @@
           <folding>
             <element signature="e#27826#27827#0" expanded="true" />
             <element signature="e#27877#27878#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/material_dialog/PromptDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-606">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3024,10 +2937,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/prompt_dialog.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="62">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -3040,49 +2956,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="355" column="0" lean-forward="true" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+        <state relative-caret-position="122">
+          <caret line="217" column="83" lean-forward="false" selection-start-line="217" selection-start-column="83" selection-end-line="217" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3079#3269#0" expanded="true" />
-            <element signature="e#3268#3269#0" expanded="true" />
-            <element signature="e#4303#4320#0" expanded="true" />
-            <element signature="e#4363#4387#0" expanded="true" />
-            <element signature="e#4437#4460#0" expanded="true" />
-            <element signature="e#4723#4745#0" expanded="true" />
-            <element signature="e#5303#5331#0" expanded="true" />
-            <element signature="e#5460#5485#0" expanded="true" />
-            <element signature="e#5966#6014#0" expanded="true" />
-            <element signature="e#6346#6370#0" expanded="true" />
-            <element signature="e#6421#7428#0" expanded="true" />
-            <element signature="e#6848#6885#0" expanded="true" />
-            <element signature="e#6951#6980#0" expanded="true" />
-            <element signature="e#7014#7355#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
-            <element signature="e#7427#7428#0" expanded="true" />
-            <element signature="e#9122#9154#0" expanded="true" />
-            <element signature="e#9270#9300#0" expanded="true" />
-            <element signature="e#9422#9462#0" expanded="true" />
-            <element signature="e#10013#10043#0" expanded="true" />
-            <element signature="e#10158#10189#0" expanded="true" />
-            <element signature="e#10312#10352#0" expanded="true" />
-            <element signature="e#11040#11071#0" expanded="true" />
-            <element signature="e#11312#11343#0" expanded="true" />
-            <element signature="e#11735#11763#0" expanded="true" />
-            <element signature="e#12016#13069#0" expanded="true" />
-            <element signature="e#12304#12356#0" expanded="true" />
-            <element signature="e#12505#12558#0" expanded="true" />
-            <element signature="e#12707#12759#0" expanded="true" />
-            <element signature="e#12909#12962#0" expanded="true" />
-            <element signature="e#13068#13069#0" expanded="true" />
-            <element signature="e#14355#14379#0" expanded="true" />
-            <element signature="e#14454#14465#0" expanded="true" />
-            <element signature="e#14467#14869#0" expanded="true" />
-            <element signature="e#14868#14869#0" expanded="true" />
-            <element signature="e#18885#18921#0" expanded="true" />
-            <element signature="e#19457#19488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ferid/app/notetake/dialogs/PromptDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2955#2996#0" expanded="true" />
           </folding>
         </state>
       </provider>
