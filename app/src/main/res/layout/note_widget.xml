@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/primary_text"
-        android:fontFamily="@string/fontFamilyLight"
+        android:fontFamily="@font/slab"
         android:hint="@string/noteHint"
         android:textColorHint="@color/secondary_text"/>
 

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Note Taker</string>
+
+    <!-- shared preferences -->
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
     <string name="prefFontSize">FONT_SIZE</string>
-
-    <!-- font families -->
-    <string name="fontFamilyRegular">sans-serif</string>
-    <string name="fontFamilyLight">sans-serif-light</string>
+    <!-- /// -->
 
     <string name="noteHint">Your note</string>
     <string name="sure">Are you sure?</string>

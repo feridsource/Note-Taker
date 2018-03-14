@@ -22,7 +22,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
                 android:textSize="16sp"
-                android:fontFamily="@string/fontFamilyRegular"
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 android:maxLines="1"
@@ -47,8 +46,7 @@
             style="?android:attr/borderlessButtonStyle"
             android:textSize="12sp"
             android:textColor="@color/colour_primary_dark"
-            android:textStyle="bold"
-            android:fontFamily="@string/fontFamilyRegular"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

@@ -20,7 +20,7 @@
         android:gravity="top"
         android:background="@android:color/transparent"
         android:textColor="@color/primary_text"
-        android:fontFamily="@string/fontFamilyLight"
+        android:fontFamily="@font/slab"
         android:hint="@string/noteHint"
         android:textColorHint="@color/secondary_text"
         android:inputType="textCapSentences|textMultiLine"
