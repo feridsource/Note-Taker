@@ -19,13 +19,13 @@ android {
     }
 }
 
-def supportLibVersion = "27.1.0"
+def supportLibVersion = "27.1.1"
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //support lib
-    compile "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
     //design
-    compile "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
 }
