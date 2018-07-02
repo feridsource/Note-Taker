@@ -25,7 +25,7 @@ import java.io.File;
  */
 public class DirectoryUtility {
     //application's folder path
-    private static final String PATH_FOLDER = Environment.getExternalStorageDirectory()
+    private static final String PATH_FOLDER = Environment.getExternalStorageDirectory().toString()
             + "/note_widget/";
 
     /**

@@ -5,12 +5,6 @@
     <item
         android:id="@+id/item_size"
         android:title="@string/fontSize"
-        android:orderInCategory="7"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/item_upload"
-        android:title="@string/open"
         android:orderInCategory="6"
         app:showAsAction="never" />
 

@@ -25,7 +25,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.support.design.widget.Snackbar;
@@ -44,17 +43,14 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ferid.app.notetake.enums.PermissionFor;
-import com.ferid.app.notetake.interfaces.PromptListener;
 import com.ferid.app.notetake.dialogs.PromptDialog;
+import com.ferid.app.notetake.interfaces.PromptListener;
 import com.ferid.app.notetake.prefs.PrefsUtil;
 import com.ferid.app.notetake.utility.DirectoryUtility;
 import com.ferid.app.notetake.widget.NoteWidget;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -67,12 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int SPEECH_REQUEST_CODE = 100;
     private static final int REQUEST_EXTERNAL_STORAGE = 101;
-    private static final int REQUEST_IMPORT_TXT = 102;
 
     private static final String EXTENSION = ".txt";
-
-    //permission type for action
-    private PermissionFor permissionFor = PermissionFor.NONE;
 
 
     @Override
@@ -267,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 outputStream = new FileOutputStream (
-                        new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION), true);
+                        new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION));
                 outputStream.write(notePad.getText().toString().getBytes());
             } catch (IOException e) {
                 isFileOperationSuccessful = false;
@@ -293,65 +285,6 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(notePad, getString(R.string.mountExternalStorage),
                     Snackbar.LENGTH_LONG).show();
         }
-    }
-
-    /**
-     * Browse files to upload txt file
-     */
-    private void browseFiles() {
-        //if directory is not mounted do not start the operation
-        if (DirectoryUtility.isExternalStorageMounted()) {
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-            intent.setType("*/*");
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            try {
-                startActivityForResult(Intent.createChooser(intent,
-                        getString(R.string.selectFile)), REQUEST_IMPORT_TXT);
-            } catch (ActivityNotFoundException e) {
-                Snackbar.make(notePad, getString(R.string.uploadError),
-                        Snackbar.LENGTH_LONG).show();
-            }
-
-        } else {
-            Snackbar.make(notePad, getString(R.string.mountExternalStorage),
-                    Snackbar.LENGTH_LONG).show();
-        }
-    }
-
-    /**
-     * Upload txt / read from file
-     * @param path
-     */
-    private void readFromFile(String path) {
-        StringBuilder text = new StringBuilder("");
-        BufferedReader br = null;
-        try {
-            File file = new File(path);
-            br = new BufferedReader(new FileReader(file));
-            String line;
-            while ((line = br.readLine()) != null) {
-                if (!text.toString().equals("")) {
-                    text.append("\n");
-                }
-                text.append(line);
-            }
-
-        } catch (IOException e) {
-            Snackbar.make(notePad, getString(R.string.uploadError),
-                    Snackbar.LENGTH_LONG).show();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    Snackbar.make(notePad, getString(R.string.uploadError),
-                            Snackbar.LENGTH_LONG).show();
-                }
-            }
-        }
-
-        notePad.setText(text.toString());
-        notePad.setSelection(notePad.getText().length());
     }
 
     /**
@@ -409,14 +342,7 @@ public class MainActivity extends AppCompatActivity {
 
             getPermissionExternalStorage();
         } else { //permission already granted
-            if (permissionFor == PermissionFor.READ_FILE) {
-                browseFiles();
-            } else if (permissionFor == PermissionFor.WRITE_FILE) {
-                getFileName();
-            }
-
-            //back to its initial state
-            permissionFor = PermissionFor.NONE;
+            getFileName();
         }
     }
 
@@ -453,14 +379,7 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length > 0
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                if (permissionFor == PermissionFor.READ_FILE) {
-                    browseFiles();
-                } else if (permissionFor == PermissionFor.WRITE_FILE) {
-                    getFileName();
-                }
-
-                //back to its initial state
-                permissionFor = PermissionFor.NONE;
+                getFileName();
             }
         }
     }
@@ -518,11 +437,6 @@ public class MainActivity extends AppCompatActivity {
                 shareNotes();
                 return true;
             case R.id.item_save_as:
-                permissionFor = PermissionFor.WRITE_FILE;
-                askForPermissionExternalStorage();
-                return true;
-            case R.id.item_upload:
-                permissionFor = PermissionFor.READ_FILE;
                 askForPermissionExternalStorage();
                 return true;
             case R.id.item_size:
@@ -547,32 +461,6 @@ public class MainActivity extends AppCompatActivity {
             //now append the spoken text
             appendNote(spokenText);
 
-        } else  if (requestCode == REQUEST_IMPORT_TXT) {
-            if (resultCode == RESULT_OK && data.getData() != null) {
-                String filePath = data.getData().getPath();
-
-                //only sqlite extension is allowed
-                if (!filePath.endsWith("txt")) {
-                    Snackbar.make(notePad, getString(R.string.extensionWarning),
-                            Snackbar.LENGTH_LONG).show();
-                    return;
-                }
-
-                if (filePath.contains(":")) {
-                    String[] partFilePath = filePath.split(":");
-                    if (partFilePath.length == 2) {
-                        String fullPath = Environment.getExternalStorageDirectory()
-                                + "/" + partFilePath[1];
-
-                        readFromFile(fullPath);
-                    } else {
-                        Snackbar.make(notePad, getString(R.string.uploadError),
-                                Snackbar.LENGTH_LONG).show();
-                    }
-                } else {
-                    readFromFile(filePath);
-                }
-            }
         }
 
         super.onActivityResult(requestCode, resultCode, data);
