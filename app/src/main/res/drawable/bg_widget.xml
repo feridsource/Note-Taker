@@ -9,14 +9,13 @@
 
     <padding
         android:top="@dimen/margin_tiny"
-        android:bottom="@dimen/margin_tiny"
         android:left="@dimen/margin_small"
         android:right="@dimen/margin_small">
     </padding>
 
     <!-- Here is the corner radius -->
     <corners
-            android:radius="3dp">
+            android:radius="@dimen/radius">
     </corners>
 
 </shape>
