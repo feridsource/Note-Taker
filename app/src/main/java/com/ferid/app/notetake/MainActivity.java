@@ -34,12 +34,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -78,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         notePad = findViewById(R.id.notePad);
-
-        setFontSize();
 
         getText();
     }
@@ -288,51 +284,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Ask user to change font size
-     */
-    private void changeFontSize() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(getString(R.string.fontSize));
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1);
-        arrayAdapter.addAll(getResources().getStringArray(R.array.font_sizes));
-        builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int which) {
-                switch (which) {
-                    case 0:
-                        PrefsUtil.setFontSize(context,
-                                getResources().getInteger(R.integer.font_size_small));
-                        break;
-                    case 1:
-                        PrefsUtil.setFontSize(context,
-                                getResources().getInteger(R.integer.font_size_medium));
-                        break;
-                    case 2:
-                        PrefsUtil.setFontSize(context,
-                                getResources().getInteger(R.integer.font_size_large));
-                        break;
-                    default:
-                        PrefsUtil.setFontSize(context,
-                                getResources().getInteger(R.integer.font_size_medium));
-                        break;
-                }
-
-                setFontSize();
-            }
-        });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
-
-    /**
-     * Set font size
-     */
-    private void setFontSize() {
-        notePad.setTextSize(TypedValue.COMPLEX_UNIT_SP, PrefsUtil.getFontSize(context));
-    }
-
-    /**
      * Ask for read-write external storage permission
      */
     private void askForPermissionExternalStorage() {
@@ -438,9 +389,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.item_save_as:
                 askForPermissionExternalStorage();
-                return true;
-            case R.id.item_size:
-                changeFontSize();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

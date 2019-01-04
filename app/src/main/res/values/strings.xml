@@ -5,7 +5,6 @@
     <!-- shared preferences -->
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
     <string name="prefNote">NOTE</string>
-    <string name="prefFontSize">FONT_SIZE</string>
     <!-- /// -->
 
     <string name="noteHint">Your note</string>
@@ -17,7 +16,6 @@
     <string name="share">Share Notes</string>
     <string name="listen">Listen To Me</string>
     <string name="saveAs">Save As</string>
-    <string name="fontSize">Font Size</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
 
     <string name="grantPermission">Grant permission</string>
@@ -31,9 +29,5 @@
     <string name="overwrite">OVERWRITE</string>
     <string name="mountExternalStorage">Please mount external storage</string>
     <string name="enterFileName">Enter file name</string>
-
-    <string name="font_size_small">Small</string>
-    <string name="font_size_medium">Medium</string>
-    <string name="font_size_big">Big</string>
 
 </resources>

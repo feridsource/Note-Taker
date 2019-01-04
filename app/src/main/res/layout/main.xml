@@ -19,6 +19,7 @@
         android:paddingRight="@dimen/margin_big"
         android:gravity="top"
         android:background="@android:color/transparent"
+        android:textSize="@dimen/main_text_size"
         android:textColor="@color/primary_text"
         android:fontFamily="@font/slab"
         android:hint="@string/noteHint"

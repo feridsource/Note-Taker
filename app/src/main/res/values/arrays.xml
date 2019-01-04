@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="font_sizes">
-        <item>@string/font_size_small</item>
-        <item>@string/font_size_medium</item>
-        <item>@string/font_size_big</item>
-    </string-array>
-</resources>
