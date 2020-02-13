@@ -14,42 +14,37 @@
  * limitations under the License.
  */
 
-package com.ferid.app.notetake.utility;
+package com.ferid.app.notetake.utility
 
-import android.os.Environment;
+import android.os.Environment
+import java.io.File
 
-import java.io.File;
+object DirectoryUtility {
 
-/**
- * Created by ferid.cafer on 10/12/2015.
- */
-public class DirectoryUtility {
     //application's folder path
-    private static final String PATH_FOLDER = Environment.getExternalStorageDirectory().toString()
-            + "/note_widget/";
+    private val PATH_FOLDER: String = (Environment.getExternalStorageDirectory().toString()
+            + "/note_widget/")
 
     /**
      * Checks if external storage is available for read and write
      * @return
      */
-    public static boolean isExternalStorageMounted() {
-        String state = Environment.getExternalStorageState();
+    fun isExternalMounted(): Boolean {
+        var state = Environment.getExternalStorageState()
 
-        return Environment.MEDIA_MOUNTED.equals(state);
+        return Environment.MEDIA_MOUNTED.equals(state)
     }
 
     /**
      * Create directory for the application's use
      */
-    public static void createDirectory() {
-        // Output stream
-        // create a File object for the parent directory
-        File directory = new File(PATH_FOLDER);
-        // have the object build the directory structure, if needed.
-        directory.mkdirs();
+    fun createDirectory() {
+        var directory = File(PATH_FOLDER)
+
+        directory.mkdir()
     }
 
-    public static String getPathFolder() {
-        return PATH_FOLDER;
+    fun getPathFolder(): String {
+        return PATH_FOLDER
     }
 }

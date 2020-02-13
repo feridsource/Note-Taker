@@ -27,6 +27,7 @@
         android:inputType="textCapSentences|textMultiLine"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:autofillHints="@null"/>
 
 </LinearLayout>

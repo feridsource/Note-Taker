@@ -14,15 +14,11 @@
  * limitations under the License.
  */
 
-package com.ferid.app.notetake.interfaces;
+package com.ferid.app.notetake.interfaces
 
-/**
- * Created by ferid.cafer on 4/3/2015.
- */
-public interface PromptListener {
+interface PromptListener {
     /**
-     * On Prompt
-     * @param promptText String
+     * On prompt
      */
-    void OnPrompt(String promptText);
+    fun onPrompt(promptText : String)
 }

@@ -27,12 +27,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.Menu;
@@ -41,11 +35,18 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.ferid.app.notetake.dialogs.PromptDialog;
 import com.ferid.app.notetake.interfaces.PromptListener;
 import com.ferid.app.notetake.prefs.PrefsUtil;
 import com.ferid.app.notetake.utility.DirectoryUtility;
 import com.ferid.app.notetake.widget.NoteWidget;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                String note = PrefsUtil.getNote(context);
+                String note = PrefsUtil.INSTANCE.getNote(context);
 
                 writeIntoNote(note);
             }
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void saveText() {
         if (notePad != null) {
-            PrefsUtil.setNote(context, notePad.getText().toString());
+            PrefsUtil.INSTANCE.setNote(context, notePad.getText().toString());
 
             updateNoteWidget();
         }
@@ -192,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
         promptDialog.setPositiveButton(getString(R.string.save));
         promptDialog.setOnPositiveClickListener(new PromptListener() {
             @Override
-            public void OnPrompt(String promptText) {
+            public void onPrompt(String promptText) {
 
                 promptDialog.dismiss();
 
@@ -225,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
      * @return yes or no
      */
     private boolean isFileExist(String fileName) {
-        File file = new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION);
+        File file = new File(DirectoryUtility.INSTANCE.getPathFolder() + fileName + EXTENSION);
 
         return file.exists();
     }
@@ -235,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
      * @param fileName file name
      */
     private void deleteExistingFile(String fileName) {
-        File file = new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION);
+        File file = new File(DirectoryUtility.INSTANCE.getPathFolder() + fileName + EXTENSION);
         if (file.exists()) {
             file.delete();
         }
@@ -247,15 +248,15 @@ public class MainActivity extends AppCompatActivity {
     private void saveAs(String fileName) {
         boolean isFileOperationSuccessful = true;
 
-        if (DirectoryUtility.isExternalStorageMounted()) {
+        if (DirectoryUtility.INSTANCE.isExternalMounted()) {
 
-            DirectoryUtility.createDirectory();
+            DirectoryUtility.INSTANCE.createDirectory();
 
             FileOutputStream outputStream = null;
 
             try {
                 outputStream = new FileOutputStream (
-                        new File(DirectoryUtility.getPathFolder() + fileName + EXTENSION));
+                        new File(DirectoryUtility.INSTANCE.getPathFolder() + fileName + EXTENSION));
                 outputStream.write(notePad.getText().toString().getBytes());
             } catch (IOException e) {
                 isFileOperationSuccessful = false;

@@ -1,14 +1,16 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "com.ferid.app.notetake"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 36
-        versionName "4.8.1"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 37
+        versionName "4.9.0"
     }
     buildTypes {
         release {
@@ -19,13 +21,15 @@ android {
     }
 }
 
-def supportLibVersion = "28.0.0"
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    //support lib
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
     //design
-    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.google.android.material:material:1.1.0"
+    //androidx
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
