@@ -31,7 +31,7 @@ import com.google.android.material.textfield.TextInputLayout
 /**
  * Ask user the name of the file to be saved
  */
-class PromptDialog(context: Context) : Dialog(context) {
+class SaveAsDialog(context: Context) : Dialog(context) {
 
     private val inputLayoutContent: TextInputLayout
     private val content: EditText
@@ -77,15 +77,18 @@ class PromptDialog(context: Context) : Dialog(context) {
         }
     }
 
+    /**
+     * Show keyboard to type file name
+     */
     override fun show() {
         if (window != null) {
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+            getWindow()!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
         }
         super.show()
     }
 
     init {
-        setContentView(R.layout.prompt_dialog)
+        setContentView(R.layout.dialog_save_as)
 
         inputLayoutContent = findViewById(R.id.inputLayoutContent)
         content = findViewById(R.id.content)

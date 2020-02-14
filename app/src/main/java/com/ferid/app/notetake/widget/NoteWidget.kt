@@ -22,8 +22,8 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
-import com.ferid.app.notetake.MainActivity
 import com.ferid.app.notetake.R
+import com.ferid.app.notetake.MainActivity
 import com.ferid.app.notetake.prefs.PrefsUtil.getNote
 
 /**
@@ -38,7 +38,7 @@ class NoteWidget : AppWidgetProvider() {
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
         this.context = context
         this.appWidgetManager = appWidgetManager
-        remoteViews = RemoteViews(context.packageName, R.layout.note_widget)
+        remoteViews = RemoteViews(context.packageName, R.layout.widget_note)
         thisWidget = ComponentName(context, NoteWidget::class.java)
         note
     }
@@ -46,7 +46,7 @@ class NoteWidget : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         this.context = context
         appWidgetManager = AppWidgetManager.getInstance(context)
-        remoteViews = RemoteViews(context.packageName, R.layout.note_widget)
+        remoteViews = RemoteViews(context.packageName, R.layout.widget_note)
         thisWidget = ComponentName(context, NoteWidget::class.java)
         if (intent.action == APP_TO_WID) {
             if (remoteViews != null) {

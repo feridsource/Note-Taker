@@ -16,35 +16,25 @@
 
 package com.ferid.app.notetake.utility
 
-import android.os.Environment
+import android.content.Context
 import java.io.File
 
 object DirectoryUtility {
 
-    //application's folder path
-    private val PATH_FOLDER: String = (Environment.getExternalStorageDirectory().toString()
-            + "/note_widget/")
-
-    /**
-     * Checks if external storage is available for read and write
-     * @return
-     */
-    fun isExternalMounted(): Boolean {
-        var state = Environment.getExternalStorageState()
-
-        return Environment.MEDIA_MOUNTED.equals(state)
-    }
-
     /**
      * Create directory for the application's use
      */
-    fun createDirectory() {
-        var directory = File(PATH_FOLDER)
+    fun createDirectory(context: Context) {
+        var directory = File(getPathFolder(context))
 
-        directory.mkdir()
+        directory.mkdirs()
     }
 
-    fun getPathFolder(): String {
-        return PATH_FOLDER
+    /**
+     * Get folder where to save
+     */
+    fun getPathFolder(context: Context): String {
+        return context.getExternalFilesDir(null)!!.absolutePath + "/note_widget/"
     }
+
 }
