@@ -37,6 +37,9 @@ import com.ferid.app.notetake.prefs.PrefsUtil
 import com.ferid.app.notetake.widget.NoteWidget
 import java.util.*
 
+/**
+ * Main
+ */
 class MainActivity : AppCompatActivity() {
 
     private var mContext: Context? = null
@@ -173,10 +176,10 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == REQUEST_SPEECH && resultCode == Activity.RESULT_OK && data != null) {
-            val results: ArrayList<String> = data.getStringArrayListExtra(
+            val results = data.getStringArrayListExtra(
                     RecognizerIntent.EXTRA_RESULTS
             )
-            if (results.isNotEmpty()) {
+            if (results != null) {
                 var spokenText: String? = results[0]
 
                 //capitalise the first letter

@@ -21,6 +21,9 @@ import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.ferid.app.notetake.R
 
+/**
+ * Shared preferences
+ */
 object PrefsUtil {
 
     private var prefs: SharedPreferences? = null
