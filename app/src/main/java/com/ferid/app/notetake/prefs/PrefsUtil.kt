@@ -23,7 +23,7 @@ import com.ferid.app.notetake.R
 
 object PrefsUtil {
 
-    var prefs: SharedPreferences? = null
+    private var prefs: SharedPreferences? = null
 
     /**
      * Initialise shared preferences

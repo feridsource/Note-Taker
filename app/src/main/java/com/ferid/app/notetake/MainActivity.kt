@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         mContext = this
 
-        var toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         notePad = findViewById(R.id.notePad)
@@ -60,11 +60,9 @@ class MainActivity : AppCompatActivity() {
      * Retrieves from preferences
      */
     private fun readNote() {
-       var handler = Handler().post(Runnable {
-           var note: String? = PrefsUtil.getNote(mContext!!)
-
-           writeNote(note)
-       })
+       Handler().post {
+           writeNote(PrefsUtil.getNote(mContext!!))
+       }
     }
 
     /**
@@ -73,7 +71,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun writeNote(note: String?) {
         notePad!!.setText(note)
-        notePad!!.setSelection(notePad!!.getText()!!.length)
+        notePad!!.setSelection(notePad!!.text!!.length)
     }
 
     /**
@@ -82,7 +80,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun appendNote(note: String?) {
         //get the current note which was already written
-        var currentNote: String? = notePad!!.getText().toString()
+        var currentNote: String? = notePad!!.text.toString()
         //if there is something written before, go to a new line
         if (!currentNote.equals("")) {
             currentNote += "\n"
@@ -107,7 +105,7 @@ class MainActivity : AppCompatActivity() {
      * Saves into preferences
      */
     private fun saveText() {
-        PrefsUtil.setNote(mContext!!, notePad!!.getText().toString())
+        PrefsUtil.setNote(mContext!!, notePad!!.text.toString())
 
         updateNoteWidget()
     }
@@ -117,9 +115,9 @@ class MainActivity : AppCompatActivity() {
      */
     private fun shareNote() {
         val intent = Intent(Intent.ACTION_SEND)
-        intent.setType("text/plain")
+        intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
-        intent.putExtra(Intent.EXTRA_TEXT, notePad!!.getText().toString())
+        intent.putExtra(Intent.EXTRA_TEXT, notePad!!.text.toString())
         startActivity(Intent.createChooser(intent, getString(R.string.share)))
     }
 
@@ -156,7 +154,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun updateNoteWidget() {
         val appWidgetManager = AppWidgetManager.getInstance(mContext)
-        val thisAppWidget = ComponentName(getPackageName(),
+        val thisAppWidget = ComponentName(packageName,
                 this.javaClass.name)
         val updateWidget = Intent(mContext, NoteWidget::class.java)
         val appWidgetIds = appWidgetManager.getAppWidgetIds(thisAppWidget)
@@ -175,11 +173,11 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == REQUEST_SPEECH && resultCode == Activity.RESULT_OK && data != null) {
-            var results: ArrayList<String> = data!!.getStringArrayListExtra(
+            val results: ArrayList<String> = data.getStringArrayListExtra(
                     RecognizerIntent.EXTRA_RESULTS
             )
             if (results.isNotEmpty()) {
-                var spokenText: String? = results.get(0)
+                var spokenText: String? = results[0]
 
                 //capitalise the first letter
                 spokenText = capitalizeFirstLetter(spokenText!!)

@@ -31,9 +31,9 @@ import com.ferid.app.notetake.prefs.PrefsUtil.getNote
  */
 class NoteWidget : AppWidgetProvider() {
     private var context: Context? = null
-    protected var remoteViews: RemoteViews? = null
-    protected var appWidgetManager: AppWidgetManager? = null
-    protected var thisWidget: ComponentName? = null
+    private var remoteViews: RemoteViews? = null
+    private var appWidgetManager: AppWidgetManager? = null
+    private var thisWidget: ComponentName? = null
 
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
         this.context = context

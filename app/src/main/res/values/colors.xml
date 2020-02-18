@@ -9,7 +9,7 @@
     <color name="primary_text">@color/blackish</color>
     <color name="secondary_text">@color/dark_grey</color>
 
-    <color name="colour_accent">#009688</color>
-    <color name="colour_primary">#009688</color>
-    <color name="colour_primary_dark">#00796B</color>
+    <color name="color_accent">#009688</color>
+    <color name="color_primary">#009688</color>
+    <color name="color_primary_dark">#00796B</color>
 </resources>

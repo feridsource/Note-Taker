@@ -15,10 +15,6 @@
     <string name="save_close">Save and Close</string>
     <string name="share">Share Note</string>
     <string name="listen">Listen To Me</string>
-    <string name="saveAs">Save As</string>
     <string name="voiceRecognitionNotSupported">Voice recognition is not supported in your device</string>
-
-    <string name="ok">OK</string>
-    <string name="save">Save</string>
 
 </resources>
