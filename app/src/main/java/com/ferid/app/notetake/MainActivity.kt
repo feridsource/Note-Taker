@@ -16,18 +16,15 @@
 
 package com.ferid.app.notetake
 
-import android.Manifest
 import android.app.Activity
 import android.appwidget.AppWidgetManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import android.speech.RecognizerIntent
-import android.text.TextUtils
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
@@ -36,16 +33,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import com.ferid.app.notetake.dialogs.SaveAsDialog
-import com.ferid.app.notetake.interfaces.PromptListener
 import com.ferid.app.notetake.prefs.PrefsUtil
-import com.ferid.app.notetake.utility.DirectoryUtility.createDirectory
-import com.ferid.app.notetake.utility.DirectoryUtility.getPathFolder
 import com.ferid.app.notetake.widget.NoteWidget
-import com.google.android.material.snackbar.Snackbar
-import java.io.File
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -153,119 +142,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Get file name via asking user
-     */
-    private fun getFileName() {
-        val saveAsDialog = SaveAsDialog(mContext!!)
-        saveAsDialog.setPositiveButton(getString(R.string.save))
-
-        saveAsDialog.setOnPositiveClickListener(object : PromptListener {
-            override fun onPrompt(promptText: String) {
-                saveAsDialog.dismiss()
-                if (!TextUtils.isEmpty(promptText)) {
-                    val fileName = promptText.trim { it <= ' ' }
-                    if (!isFileExist(fileName)) {
-                        saveAs(fileName)
-                    } else {
-                        Snackbar.make(notePad!!, getString(R.string.fileAlreadyExists),
-                                Snackbar.LENGTH_LONG).setAction(getString(R.string.overwrite)
-                        ) {
-                            deleteExistingFile(fileName)
-                            saveAs(fileName)
-                        }.show()
-                    }
-                }
-            }
-        })
-        saveAsDialog.show()
-    }
-
-    /**
-     * Does the given file name already exist?
-     * @param fileName Given file name
-     * @return yes or no
-     */
-    private fun isFileExist(fileName: String): Boolean {
-        val file = File(getPathFolder(mContext!!) + fileName + EXTENSION)
-        return file.exists()
-    }
-
-    /**
-     * Delete existing file
-     * @param fileName file name
-     */
-    private fun deleteExistingFile(fileName: String) {
-        val file = File(getPathFolder(mContext!!) + fileName + EXTENSION)
-        if (file.exists()) {
-            file.delete()
-        }
-    }
-
-    /**
-     * Save into a file
-     */
-    private fun saveAs(fileName: String) {
-        createDirectory(mContext!!)
-
-        val file = File(getPathFolder(mContext!!) + fileName + EXTENSION)
-        file.writeText(notePad!!.text.toString())
-
-        if (file.exists()) {
-            Snackbar.make(notePad!!, getString(R.string.writeSuccess),
-                    Snackbar.LENGTH_LONG).show()
-        } else {
-            Snackbar.make(notePad!!, getString(R.string.writeError),
-                    Snackbar.LENGTH_LONG).show()
-        }
-    }
-
-    /**
-     * Ask for read-write external storage permission
-     */
-    private fun askForPermissionExternalStorage() {
-        if (ContextCompat.checkSelfPermission(this,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) { //permission yet to be granted
-            getPermissionExternalStorage()
-        } else { //permission already granted
-            getFileName()
-        }
-    }
-
-    /**
-     * Request and get the permission for external storage
-     */
-    private fun getPermissionExternalStorage() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            Snackbar.make(notePad!!, R.string.grantPermission,
-                    Snackbar.LENGTH_LONG)
-                    .setAction(R.string.ok) {
-                        ActivityCompat.requestPermissions(this,
-                                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                                REQUEST_EXTERNAL_STORAGE)
-                    }.show()
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                    REQUEST_EXTERNAL_STORAGE)
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int,
-                                   permissions: Array<String>, grantResults: IntArray) {
-        when (requestCode) {
-            REQUEST_EXTERNAL_STORAGE -> {
-                //if request is cancelled, the result arrays are empty.
-                if (grantResults.isNotEmpty()
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    getFileName()
-                }
-            }
-        }
-    }
-
-    /**
      * Capitalize the first letter of a given text
      * @param text
      * @return
@@ -337,17 +213,11 @@ class MainActivity : AppCompatActivity() {
                 shareNote()
                 true
             }
-            R.id.item_save_as -> {
-                askForPermissionExternalStorage()
-                true
-            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     companion object {
         const val REQUEST_SPEECH = 100
-        const val REQUEST_EXTERNAL_STORAGE = 101
-        const val EXTENSION = ".txt"
     }
 }

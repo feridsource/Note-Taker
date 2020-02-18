@@ -3,35 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/item_save_as"
-        android:title="@string/saveAs"
-        android:orderInCategory="5"
-        app:showAsAction="never" />
+        android:id="@+id/item_delete"
+        android:title="@string/eraseAll"
+        android:icon="@drawable/ic_delete"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/item_share"
         android:title="@string/share"
-        android:orderInCategory="4"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_share"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/item_listen"
         android:title="@string/listen"
+        android:icon="@drawable/ic_keyboard_voice"
         android:orderInCategory="3"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/item_save"
         android:title="@string/save_close"
         android:icon="@drawable/ic_save"
-        android:orderInCategory="2"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/item_delete"
-        android:title="@string/eraseAll"
-        android:icon="@drawable/ic_delete"
-        android:orderInCategory="1"
-        app:showAsAction="ifRoom" />
+        android:orderInCategory="4"
+        app:showAsAction="always" />
 
 </menu>
