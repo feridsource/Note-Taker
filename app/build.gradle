@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -9,8 +9,8 @@ android {
         applicationId "com.ferid.app.notetake"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 37
-        versionName "4.9.0"
+        versionCode 38
+        versionName "4.9.1"
     }
     buildTypes {
         release {

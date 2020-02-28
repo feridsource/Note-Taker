@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Note Taker</string>
+    <string name="app_name">Noter</string>
 
     <!-- shared preferences -->
     <string name="sharedPreferences">NOTE_TAKE_PREF</string>
